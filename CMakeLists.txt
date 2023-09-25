@@ -2058,10 +2058,10 @@ SET(OLD_CMAKE_REQUIRED_FLAGS "${CMAKE_REQUIRED_FLAGS}")
 SET(CMAKE_REQUIRED_FLAGS "${CMAKE_REQUIRED_FLAGS} -fvisibility=hidden -Werror")
 CHECK_C_SOURCE_COMPILES("void __attribute__((visibility(\"default\"))) foo(void);
 int main() { return 0; }" HAVE_VISIBILITY_ATTR)
-IF (HAVE_VISIBILITY_ATTR)
+IF (0)
   SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fvisibility=hidden")
   ADD_DEFINITIONS(-D__LIBARCHIVE_ENABLE_VISIBILITY)
-ENDIF(HAVE_VISIBILITY_ATTR)
+ENDIF(0)
 SET(CMAKE_REQUIRED_FLAGS "${OLD_CMAKE_REQUIRED_FLAGS}")
 
 # Generate "config.h" from "build/cmake/config.h.in"
